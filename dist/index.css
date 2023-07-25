@@ -1,13 +1,125 @@
-/*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-*,
-::before,
-::after {
+.picker {
+  /*
+  ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+  */
+  /*
+  1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+  2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+  */
+  /*
+  1. Use a consistent sensible line-height in all browsers.
+  2. Prevent adjustments of font size after orientation changes in iOS.
+  3. Use a more readable tab size.
+  4. Use the user's configured `sans` font-family by default.
+  5. Use the user's configured `sans` font-feature-settings by default.
+  6. Use the user's configured `sans` font-variation-settings by default.
+  */
+  /*
+  1. Remove the margin in all browsers.
+  2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+  */
+  /*
+  1. Add the correct height in Firefox.
+  2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  3. Ensure horizontal rules are visible by default.
+  */
+  /*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+  */
+  /*
+  Remove the default font size and weight for headings.
+  */
+  /*
+  Reset links to optimize for opt-in styling instead of opt-out.
+  */
+  /*
+  Add the correct font weight in Edge and Safari.
+  */
+  /*
+  1. Use the user's configured `mono` font family by default.
+  2. Correct the odd `em` font sizing in all browsers.
+  */
+  /*
+  Add the correct font size in all browsers.
+  */
+  /*
+  Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+  */
+  /*
+  1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+  3. Remove gaps between table borders by default.
+  */
+  /*
+  1. Change the font styles in all browsers.
+  2. Remove the margin in Firefox and Safari.
+  3. Remove default padding in all browsers.
+  */
+  /*
+  Remove the inheritance of text transform in Edge and Firefox.
+  */
+  /*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Remove default button styles.
+  */
+  /*
+  Use the modern Firefox focus style for all focusable elements.
+  */
+  /*
+  Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+  */
+  /*
+  Add the correct vertical alignment in Chrome and Firefox.
+  */
+  /*
+  Correct the cursor style of increment and decrement buttons in Safari.
+  */
+  /*
+  1. Correct the odd appearance in Chrome and Safari.
+  2. Correct the outline style in Safari.
+  */
+  /*
+  Remove the inner padding in Chrome and Safari on macOS.
+  */
+  /*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to `inherit` in Safari.
+  */
+  /*
+  Add the correct display in Chrome and Safari.
+  */
+  /*
+  Removes the default spacing and border for appropriate elements.
+  */
+  /*
+  Reset default styling for dialogs.
+  */
+  /*
+  Prevent resizing textareas horizontally by default.
+  */
+  /*
+  1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+  2. Set the default placeholder color to the user's configured gray 400 color.
+  */
+  /*
+  Set the default cursor for buttons.
+  */
+  /*
+  Make sure disabled buttons don't get the pointer cursor.
+  */
+  /*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+     This can trigger a poorly considered lint error in some tools but is included by design.
+  */
+  /*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+  */
+  /* Make elements with the HTML hidden attribute stay hidden by default */
+}
+.picker *,
+.picker ::before,
+.picker ::after {
   box-sizing: border-box;
   /* 1 */
   border-width: 0;
@@ -17,21 +129,11 @@
   border-color: #e5e7eb;
   /* 2 */
 }
-
-::before,
-::after {
+.picker ::before,
+.picker ::after {
   --tw-content: "";
 }
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-*/
-html {
+.picker html {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -48,24 +150,13 @@ html {
   font-variation-settings: normal;
   /* 6 */
 }
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-body {
+.picker body {
   margin: 0;
   /* 1 */
   line-height: inherit;
   /* 2 */
 }
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-hr {
+.picker hr {
   height: 0;
   /* 1 */
   color: inherit;
@@ -73,90 +164,53 @@ hr {
   border-top-width: 1px;
   /* 3 */
 }
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-abbr:where([title]) {
+.picker abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
-
-/*
-Remove the default font size and weight for headings.
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.picker h1,
+.picker h2,
+.picker h3,
+.picker h4,
+.picker h5,
+.picker h6 {
   font-size: inherit;
   font-weight: inherit;
 }
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-a {
+.picker a {
   color: inherit;
   text-decoration: inherit;
 }
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
-b,
-strong {
+.picker b,
+.picker strong {
   font-weight: bolder;
 }
-
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
-code,
-kbd,
-samp,
-pre {
+.picker code,
+.picker kbd,
+.picker samp,
+.picker pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
 }
-
-/*
-Add the correct font size in all browsers.
-*/
-small {
+.picker small {
   font-size: 80%;
 }
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-sub,
-sup {
+.picker sub,
+.picker sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
-sub {
+.picker sub {
   bottom: -0.25em;
 }
-
-sup {
+.picker sup {
   top: -0.5em;
 }
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-table {
+.picker table {
   text-indent: 0;
   /* 1 */
   border-color: inherit;
@@ -164,17 +218,11 @@ table {
   border-collapse: collapse;
   /* 3 */
 }
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-button,
-input,
-optgroup,
-select,
-textarea {
+.picker button,
+.picker input,
+.picker optgroup,
+.picker select,
+.picker textarea {
   font-family: inherit;
   /* 1 */
   font-feature-settings: inherit;
@@ -194,23 +242,14 @@ textarea {
   padding: 0;
   /* 3 */
 }
-
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-button,
-select {
+.picker button,
+.picker select {
   text-transform: none;
 }
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-button,
-[type=button],
-[type=reset],
-[type=submit] {
+.picker button,
+.picker [type=button],
+.picker [type=reset],
+.picker [type=submit] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -218,190 +257,114 @@ button,
   background-image: none;
   /* 2 */
 }
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-:-moz-focusring {
+.picker :-moz-focusring {
   outline: auto;
 }
-
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-:-moz-ui-invalid {
+.picker :-moz-ui-invalid {
   box-shadow: none;
 }
-
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-progress {
+.picker progress {
   vertical-align: baseline;
 }
-
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
+.picker ::-webkit-inner-spin-button,
+.picker ::-webkit-outer-spin-button {
   height: auto;
 }
-
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-[type=search] {
+.picker [type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
 }
-
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-::-webkit-search-decoration {
+.picker ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-::-webkit-file-upload-button {
+.picker ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
   /* 2 */
 }
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-summary {
+.picker summary {
   display: list-item;
 }
-
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
+.picker blockquote,
+.picker dl,
+.picker dd,
+.picker h1,
+.picker h2,
+.picker h3,
+.picker h4,
+.picker h5,
+.picker h6,
+.picker hr,
+.picker figure,
+.picker p,
+.picker pre {
   margin: 0;
 }
-
-fieldset {
+.picker fieldset {
   margin: 0;
   padding: 0;
 }
-
-legend {
+.picker legend {
   padding: 0;
 }
-
-ol,
-ul,
-menu {
+.picker ol,
+.picker ul,
+.picker menu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
-/*
-Reset default styling for dialogs.
-*/
-dialog {
+.picker dialog {
   padding: 0;
 }
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-textarea {
+.picker textarea {
   resize: vertical;
 }
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-input::-moz-placeholder, textarea::-moz-placeholder {
+.picker input::-moz-placeholder, .picker textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
-
-input::placeholder,
-textarea::placeholder {
+.picker input::placeholder,
+.picker textarea::placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
-
-/*
-Set the default cursor for buttons.
-*/
-button,
-[role=button] {
+.picker button,
+.picker [role=button] {
   cursor: pointer;
 }
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-:disabled {
+.picker :disabled {
   cursor: default;
 }
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
+.picker img,
+.picker svg,
+.picker video,
+.picker canvas,
+.picker audio,
+.picker iframe,
+.picker embed,
+.picker object {
   display: block;
   /* 1 */
   vertical-align: middle;
   /* 2 */
 }
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-img,
-video {
+.picker img,
+.picker video {
   max-width: 100%;
   height: auto;
 }
-
-/* Make elements with the HTML hidden attribute stay hidden by default */
-[hidden] {
+.picker [hidden] {
   display: none;
 }
-
-*, ::before, ::after {
+.picker *, .picker ::before, .picker ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -450,8 +413,7 @@ video {
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
 }
-
-::backdrop {
+.picker ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -500,324 +462,258 @@ video {
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
 }
-
-.invisible {
+.picker .invisible {
   visibility: hidden;
 }
-
-.absolute {
+.picker .absolute {
   position: absolute;
 }
-
-.relative {
+.picker .relative {
   position: relative;
 }
-
-.bottom-0 {
+.picker .bottom-0 {
   bottom: 0px;
 }
-
-.left-0 {
+.picker .left-0 {
   left: 0px;
 }
-
-.right-0 {
+.picker .right-0 {
   right: 0px;
 }
-
-.top-0 {
+.picker .top-0 {
   top: 0px;
 }
-
-.m-2 {
+.picker .m-2 {
   margin: 0.5rem;
 }
-
-.mx-auto {
+.picker .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-
-.my-4 {
+.picker .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-.my-auto {
+.picker .my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
-
-.-ml-1 {
+.picker .-ml-1 {
   margin-left: -0.25rem;
 }
-
-.mr-3 {
+.picker .mr-3 {
   margin-right: 0.75rem;
 }
-
-.flex {
+.picker .flex {
   display: flex;
 }
-
-.grid {
+.picker .grid {
   display: grid;
 }
-
-.h-5 {
+.picker .h-5 {
   height: 1.25rem;
 }
-
-.h-6 {
+.picker .h-6 {
   height: 1.5rem;
 }
-
-.h-60 {
+.picker .h-60 {
   height: 15rem;
 }
-
-.h-96 {
+.picker .h-96 {
   height: 24rem;
 }
-
-.h-full {
+.picker .h-full {
   height: 100%;
 }
-
-.w-5 {
+.picker .w-5 {
   width: 1.25rem;
 }
-
-.w-6 {
+.picker .w-6 {
   width: 1.5rem;
 }
-
-.w-full {
+.picker .w-full {
   width: 100%;
 }
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
-.animate-spin {
+.picker .animate-spin {
   animation: spin 1s linear infinite;
 }
-
-.cursor-pointer {
+.picker .cursor-pointer {
   cursor: pointer;
 }
-
-.grid-cols-1 {
+.picker .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-
-.place-content-center {
+.picker .place-content-center {
   place-content: center;
 }
-
-.place-items-center {
+.picker .place-items-center {
   place-items: center;
 }
-
-.items-center {
+.picker .items-center {
   align-items: center;
 }
-
-.justify-center {
+.picker .justify-center {
   justify-content: center;
 }
-
-.justify-between {
+.picker .justify-between {
   justify-content: space-between;
 }
-
-.gap-2 {
+.picker .gap-2 {
   gap: 0.5rem;
 }
-
-.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+.picker .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * (1 - var(--tw-space-x-reverse)));
 }
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+.picker .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * (1 - var(--tw-space-x-reverse)));
 }
-
-.overflow-hidden {
+.picker .overflow-hidden {
   overflow: hidden;
 }
-
-.overflow-y-auto {
+.picker .overflow-y-auto {
   overflow-y: auto;
 }
-
-.rounded {
+.picker .rounded {
   border-radius: 0.25rem;
 }
-
-.rounded-full {
+.picker .rounded-full {
   border-radius: 9999px;
 }
-
-.rounded-md {
+.picker .rounded-md {
   border-radius: 0.375rem;
 }
-
-.border {
+.picker .border {
   border-width: 1px;
 }
-
-.bg-blue-500 {
+.picker .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246/var(--tw-bg-opacity));
 }
-
-.bg-white {
+.picker .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255/var(--tw-bg-opacity));
 }
-
-.object-cover {
+.picker .object-cover {
   -o-object-fit: cover;
   object-fit: cover;
 }
-
-.p-4 {
+.picker .p-4 {
   padding: 1rem;
 }
-
-.px-4 {
+.picker .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
-.py-2 {
+.picker .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
-.pb-12 {
+.picker .pb-12 {
   padding-bottom: 3rem;
 }
-
-.pl-3 {
+.picker .pl-3 {
   padding-left: 0.75rem;
 }
-
-.pr-3 {
+.picker .pr-3 {
   padding-right: 0.75rem;
 }
-
-.pt-4 {
+.picker .pt-4 {
   padding-top: 1rem;
 }
-
-.text-lg {
+.picker .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-
-.text-xs {
+.picker .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-
-.font-bold {
+.picker .font-bold {
   font-weight: 700;
 }
-
-.text-gray-600 {
+.picker .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99/var(--tw-text-opacity));
 }
-
-.text-white {
+.picker .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255/var(--tw-text-opacity));
 }
-
-.opacity-25 {
+.picker .opacity-25 {
   opacity: 0.25;
 }
-
-.opacity-75 {
+.picker .opacity-75 {
   opacity: 0.75;
 }
-
-.shadow {
+.picker .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
 }
-
-.placeholder\:italic::-moz-placeholder {
+.picker .placeholder\:italic::-moz-placeholder {
   font-style: italic;
 }
-
-.placeholder\:italic::placeholder {
+.picker .placeholder\:italic::placeholder {
   font-style: italic;
 }
-
-.hover\:bg-blue-700:hover {
+.picker .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216/var(--tw-bg-opacity));
 }
-
-.focus\:outline-none:focus {
+.picker .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-
-.focus\:ring-1:focus {
+.picker .focus\:ring-1:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0, 0, 0, 0));
 }
-
-.group:hover .group-hover\:visible {
+.picker .group:hover .group-hover\:visible {
   visibility: visible;
 }
-
-.group:hover .group-hover\:bg-black\/20 {
+.picker .group:hover .group-hover\:bg-black\/20 {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 @media (min-width: 640px) {
-  .sm\:col-span-2 {
+  .picker .sm\:col-span-2 {
     grid-column: span 2/span 2;
   }
-  .sm\:h-44 {
+  .picker .sm\:h-44 {
     height: 11rem;
   }
-  .sm\:grid-cols-2 {
+  .picker .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .sm\:text-sm {
+  .picker .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 @media (min-width: 768px) {
-  .md\:col-span-3 {
+  .picker .md\:col-span-3 {
     grid-column: span 3/span 3;
   }
-  .md\:h-32 {
+  .picker .md\:h-32 {
     height: 8rem;
   }
-  .md\:grid-cols-3 {
+  .picker .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-.Modal {
+.picker .Modal {
   display: none;
 }
-.Modal.active {
+.picker .Modal.active {
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -828,7 +724,7 @@ video {
   background-color: rgba(51, 51, 51, 0.5333333333);
   display: block;
 }
-.Modal .Card {
+.picker .Modal .Card {
   max-width: calc(-120px + 100vw);
   max-height: calc(-119px + 100vh);
   margin-right: auto;
@@ -839,28 +735,25 @@ video {
   left: 0px;
   overflow: hidden;
 }
-
-.spinner {
+.picker .spinner {
   animation: spinner 0.75s ease-in-out infinite;
 }
-
-.card:hover .card-img {
+.picker .card:hover .card-img {
   filter: brightness(75%);
 }
-
 @media (min-width: 500px) {
-  .card-columns {
+  .picker .card-columns {
     column-count: 1 !important;
     overflow: hidden;
   }
 }
 @media (min-width: 640px) {
-  .card-columns {
+  .picker .card-columns {
     column-count: 2 !important;
   }
 }
 @media (min-width: 1100px) {
-  .card-columns {
+  .picker .card-columns {
     column-count: 3 !important;
   }
 }
