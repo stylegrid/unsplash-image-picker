@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 interface Props {
     unsplashAccessKey: any;
     active?: boolean;
@@ -18,5 +18,5 @@ interface Props {
  * @param {number} modalWidth - The width of the modal. Default is 840px.
  * @param {string} modalClassName - The classname for the modal.
  */
-export default function ImagePickerModal({ unsplashAccessKey, active, initialPhotoSearchQuery, setActive, onPhotoSelect, modalWidth, modalClassName }: Props): JSX.Element | null;
+export default function ImagePickerModal({ unsplashAccessKey, active, initialPhotoSearchQuery, setActive, onPhotoSelect, modalWidth, modalClassName }: Props): React.JSX.Element | null;
 export {};

@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 interface Props {
     isLoading?: boolean;
     isLoadingMore?: boolean;
@@ -7,5 +7,5 @@ interface Props {
     onPhotoSelect: (photo: any) => void;
     loadMore: () => void;
 }
-declare function PhotoList({ isLoading, isLoadingMore, photoList, total, onPhotoSelect, loadMore }: Props): JSX.Element;
+declare function PhotoList({ isLoading, isLoadingMore, photoList, total, onPhotoSelect, loadMore }: Props): React.JSX.Element;
 export default PhotoList;

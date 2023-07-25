@@ -47,8 +47,9 @@ declare const unsplashApi: (accessKey: string) => {
         getPhotos: (a: {
             query: string;
         } & Pick<import("unsplash-js/dist/types/request").PaginationParams, "page" | "perPage"> & import("unsplash-js/dist/types/request").OrientationParam & {
-            orderBy?: "relevant" | "latest" | undefined;
+            orderBy?: "relevant" | "latest" | "editorial" | undefined;
             color?: "white" | "black" | "yellow" | "orange" | "red" | "purple" | "magenta" | "green" | "teal" | "blue" | "black_and_white" | undefined;
+            plus?: "mixed" | "only" | "none" | undefined;
             lang?: import("unsplash-js").Language | undefined;
             contentFilter?: "high" | "low" | undefined;
             collectionIds?: string[] | undefined;
@@ -75,18 +76,14 @@ declare const unsplashApi: (accessKey: string) => {
     };
     topics: {
         list: (a: Pick<import("unsplash-js/dist/types/request").PaginationParams, "page" | "perPage"> & {
-            orderBy?: "latest" | "featured" | "oldest" | "position" | undefined;
+            orderBy?: "latest" | "oldest" | "position" | "featured" | undefined;
             topicIdsOrSlugs?: string[] | undefined;
         }, additionalFetchOptions?: import("unsplash-js/dist/helpers/request").AdditionalFetchOptions | undefined) => Promise<import("unsplash-js/dist/helpers/response").ApiResponse<{
             results: import("unsplash-js/dist/methods/topics/types").Basic[];
             total: number;
         }>>;
-        get: (a: {
-            topicIdOrSlug: string;
-        }, additionalFetchOptions?: import("unsplash-js/dist/helpers/request").AdditionalFetchOptions | undefined) => Promise<import("unsplash-js/dist/helpers/response").ApiResponse<import("unsplash-js/dist/methods/topics/types").Full>>;
-        getPhotos: (a: {
-            topicIdOrSlug: string;
-        } & import("unsplash-js/dist/types/request").PaginationParams & import("unsplash-js/dist/types/request").OrientationParam, additionalFetchOptions?: import("unsplash-js/dist/helpers/request").AdditionalFetchOptions | undefined) => Promise<import("unsplash-js/dist/helpers/response").ApiResponse<{
+        get: (a: import("unsplash-js/dist/methods/topics").TopicIdOrSlug, additionalFetchOptions?: import("unsplash-js/dist/helpers/request").AdditionalFetchOptions | undefined) => Promise<import("unsplash-js/dist/helpers/response").ApiResponse<import("unsplash-js/dist/methods/topics/types").Full>>;
+        getPhotos: (a: import("unsplash-js/dist/methods/topics").TopicIdOrSlug & import("unsplash-js/dist/types/request").PaginationParams & import("unsplash-js/dist/types/request").OrientationParam, additionalFetchOptions?: import("unsplash-js/dist/helpers/request").AdditionalFetchOptions | undefined) => Promise<import("unsplash-js/dist/helpers/response").ApiResponse<{
             results: import("unsplash-js/dist/methods/photos/types").Basic[];
             total: number;
         }>>;

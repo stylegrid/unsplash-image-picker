@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 interface Props {
     unsplashAccessKey: string;
     initialPhotoSearchQuery?: string;
@@ -10,5 +10,5 @@ interface Props {
  * @param {string} initialPhotoSearchQuery - The initial search query.
  * @param {function} onPhotoSelect - Function to call when a photo is selected.
  */
-export default function ImagePicker({ unsplashAccessKey, initialPhotoSearchQuery, onPhotoSelect }: Props): JSX.Element;
+export default function ImagePicker({ unsplashAccessKey, initialPhotoSearchQuery, onPhotoSelect }: Props): React.JSX.Element;
 export {};

@@ -9,29 +9,26 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
-
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
     if (excluded.indexOf(key) >= 0) continue;
     target[key] = source[key];
   }
-
   return target;
 }
 
 var _excluded = ["children", "className", "width", "padding", "active", "setActive"];
 function Modal(_ref) {
   var children = _ref.children,
-      _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 540 : _ref$width,
-      _ref$padding = _ref.padding,
-      padding = _ref$padding === void 0 ? true : _ref$padding,
-      _ref$active = _ref.active,
-      active = _ref$active === void 0 ? false : _ref$active,
-      _ref$setActive = _ref.setActive,
-      setActive = _ref$setActive === void 0 ? function (_e) {} : _ref$setActive,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 540 : _ref$width,
+    _ref$padding = _ref.padding,
+    padding = _ref$padding === void 0 ? true : _ref$padding,
+    _ref$active = _ref.active,
+    active = _ref$active === void 0 ? false : _ref$active,
+    _ref$setActive = _ref.setActive,
+    setActive = _ref$setActive === void 0 ? function (_e) {} : _ref$setActive,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   return React.createElement("div", Object.assign({
     onClick: function onClick(_e) {
       if (active) {
@@ -62,15 +59,14 @@ function Modal(_ref) {
     }
   }, children));
 }
-
 function Card(_ref2) {
   var children = _ref2.children,
-      _ref2$padding = _ref2.padding,
-      padding = _ref2$padding === void 0 ? true : _ref2$padding,
-      _ref2$style = _ref2.style,
-      style = _ref2$style === void 0 ? {} : _ref2$style,
-      _ref2$onClick = _ref2.onClick,
-      onClick = _ref2$onClick === void 0 ? function (_) {} : _ref2$onClick;
+    _ref2$padding = _ref2.padding,
+    padding = _ref2$padding === void 0 ? true : _ref2$padding,
+    _ref2$style = _ref2.style,
+    style = _ref2$style === void 0 ? {} : _ref2$style,
+    _ref2$onClick = _ref2.onClick,
+    onClick = _ref2$onClick === void 0 ? function (_) {} : _ref2$onClick;
   return React.createElement("div", {
     onClick: onClick,
     style: style,
@@ -82,8 +78,8 @@ function Card(_ref2) {
 
 function UnsplashPhotoCard(_ref) {
   var photo = _ref.photo,
-      _ref$onPhotoSelect = _ref.onPhotoSelect,
-      onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect;
+    _ref$onPhotoSelect = _ref.onPhotoSelect,
+    onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect;
   return React.createElement("div", {
     className: 'group relative h-60 sm:h-44 md:h-32 w-full place-items-center object-cover cursor-pointer border theme-border-default',
     key: photo.id,
@@ -114,31 +110,28 @@ function UnsplashPhotoCard(_ref) {
 
 function PhotoList(_ref) {
   var _ref$isLoading = _ref.isLoading,
-      isLoading = _ref$isLoading === void 0 ? false : _ref$isLoading,
-      _ref$isLoadingMore = _ref.isLoadingMore,
-      isLoadingMore = _ref$isLoadingMore === void 0 ? false : _ref$isLoadingMore,
-      photoList = _ref.photoList,
-      total = _ref.total,
-      onPhotoSelect = _ref.onPhotoSelect,
-      loadMore = _ref.loadMore;
+    isLoading = _ref$isLoading === void 0 ? false : _ref$isLoading,
+    _ref$isLoadingMore = _ref.isLoadingMore,
+    isLoadingMore = _ref$isLoadingMore === void 0 ? false : _ref$isLoadingMore,
+    photoList = _ref.photoList,
+    total = _ref.total,
+    onPhotoSelect = _ref.onPhotoSelect,
+    loadMore = _ref.loadMore;
   var listHeight = '700px';
   var ref = React.useMemo(function () {
     return React.createRef();
   }, []);
-
   var onScroll = function onScroll() {
     if (ref.current) {
       var _ref$current = ref.current,
-          scrollTop = _ref$current.scrollTop,
-          scrollHeight = _ref$current.scrollHeight,
-          clientHeight = _ref$current.clientHeight;
-
+        scrollTop = _ref$current.scrollTop,
+        scrollHeight = _ref$current.scrollHeight,
+        clientHeight = _ref$current.clientHeight;
       if (scrollHeight - (scrollTop + clientHeight) < 20) {
         loadMore();
       }
     }
   };
-
   return React.createElement("div", {
     className: 'Body'
   }, isLoading ? React.createElement("div", {
@@ -164,7 +157,6 @@ function PhotoList(_ref) {
     className: 'flex items-center justify-center h-96 text-gray-600'
   })));
 }
-
 function Loader() {
   return React.createElement("svg", {
     className: 'animate-spin -ml-1 mr-3 h-5 w-5 text-blue',
@@ -187,9 +179,8 @@ function Loader() {
 
 function SearchBar(_ref) {
   var setQuery = _ref.setQuery,
-      query = _ref.query,
-      onSearch = _ref.onSearch;
-
+    query = _ref.query,
+    onSearch = _ref.onSearch;
   var searchPhotos = function searchPhotos(e) {
     try {
       e.preventDefault();
@@ -199,7 +190,6 @@ function SearchBar(_ref) {
       return Promise.reject(e);
     }
   };
-
   return React.createElement("div", null, React.createElement("div", null, React.createElement("form", {
     onSubmit: searchPhotos,
     className: 'flex items-center space-x-2'
@@ -222,35 +212,28 @@ function SearchBar(_ref) {
 
 function ImagePicker(_ref) {
   var unsplashAccessKey = _ref.unsplashAccessKey,
-      _ref$initialPhotoSear = _ref.initialPhotoSearchQuery,
-      initialPhotoSearchQuery = _ref$initialPhotoSear === void 0 ? '' : _ref$initialPhotoSear,
-      _ref$onPhotoSelect = _ref.onPhotoSelect,
-      _onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect;
-
+    _ref$initialPhotoSear = _ref.initialPhotoSearchQuery,
+    initialPhotoSearchQuery = _ref$initialPhotoSear === void 0 ? '' : _ref$initialPhotoSear,
+    _ref$onPhotoSelect = _ref.onPhotoSelect,
+    _onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect;
   var _React$useState = React.useState([]),
-      pics = _React$useState[0],
-      setPics = _React$useState[1];
-
+    pics = _React$useState[0],
+    setPics = _React$useState[1];
   var _React$useState2 = React.useState(),
-      total = _React$useState2[0],
-      setTotal = _React$useState2[1];
-
+    total = _React$useState2[0],
+    setTotal = _React$useState2[1];
   var _React$useState3 = React.useState(''),
-      query = _React$useState3[0],
-      setQuery = _React$useState3[1];
-
+    query = _React$useState3[0],
+    setQuery = _React$useState3[1];
   var _React$useState4 = React.useState(false),
-      isLoading = _React$useState4[0],
-      setIsLoading = _React$useState4[1];
-
+    isLoading = _React$useState4[0],
+    setIsLoading = _React$useState4[1];
   var _React$useState5 = React.useState(false),
-      isLoadingMore = _React$useState5[0],
-      setIsLoadingMore = _React$useState5[1];
-
+    isLoadingMore = _React$useState5[0],
+    setIsLoadingMore = _React$useState5[1];
   var _React$useState6 = React.useState(1),
-      page = _React$useState6[0],
-      setPage = _React$useState6[1];
-
+    page = _React$useState6[0],
+    setPage = _React$useState6[1];
   var unsplash = unsplashJs.createApi({
     accessKey: unsplashAccessKey
   });
@@ -260,22 +243,18 @@ function ImagePicker(_ref) {
       fetchPhotos(1, initialPhotoSearchQuery);
     }
   }, []);
-
   var fetchPhotos = function fetchPhotos(page, text, reset) {
     if (reset === void 0) {
       reset = false;
     }
-
     if (isLoading || isLoadingMore) {
       return;
     }
-
     if (page === 1) {
       setIsLoading(true);
     } else {
       setIsLoadingMore(true);
     }
-
     setPage(page);
     unsplash.search.getPhotos({
       page: page,
@@ -284,25 +263,19 @@ function ImagePicker(_ref) {
       orientation: 'landscape'
     }).then(function (response) {
       var _response$response;
-
       var newPics = response === null || response === void 0 ? void 0 : (_response$response = response.response) === null || _response$response === void 0 ? void 0 : _response$response.results;
-
       if (newPics) {
         var mergedPics = newPics;
-
         if (!reset) {
           mergedPics = [].concat(pics, newPics);
         }
-
         setPics(mergedPics);
         setTotal(response.response.total);
       }
-
       setIsLoading(false);
       setIsLoadingMore(false);
     });
   };
-
   return React.createElement("div", {
     className: 'ImagePicker items-center bg-white rounded'
   }, React.createElement("div", {
@@ -337,7 +310,6 @@ function ImagePicker(_ref) {
         } catch (error) {
           console.log(error);
         }
-
         return Promise.resolve();
       } catch (e) {
         return Promise.reject(e);
@@ -348,23 +320,21 @@ function ImagePicker(_ref) {
 
 function ImagePickerModal(_ref) {
   var unsplashAccessKey = _ref.unsplashAccessKey,
-      _ref$active = _ref.active,
-      active = _ref$active === void 0 ? false : _ref$active,
-      _ref$initialPhotoSear = _ref.initialPhotoSearchQuery,
-      initialPhotoSearchQuery = _ref$initialPhotoSear === void 0 ? '' : _ref$initialPhotoSear,
-      _ref$setActive = _ref.setActive,
-      setActive = _ref$setActive === void 0 ? function (_) {} : _ref$setActive,
-      _ref$onPhotoSelect = _ref.onPhotoSelect,
-      onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect,
-      _ref$modalWidth = _ref.modalWidth,
-      modalWidth = _ref$modalWidth === void 0 ? 840 : _ref$modalWidth,
-      _ref$modalClassName = _ref.modalClassName,
-      modalClassName = _ref$modalClassName === void 0 ? '' : _ref$modalClassName;
-
+    _ref$active = _ref.active,
+    active = _ref$active === void 0 ? false : _ref$active,
+    _ref$initialPhotoSear = _ref.initialPhotoSearchQuery,
+    initialPhotoSearchQuery = _ref$initialPhotoSear === void 0 ? '' : _ref$initialPhotoSear,
+    _ref$setActive = _ref.setActive,
+    setActive = _ref$setActive === void 0 ? function (_) {} : _ref$setActive,
+    _ref$onPhotoSelect = _ref.onPhotoSelect,
+    onPhotoSelect = _ref$onPhotoSelect === void 0 ? function (_) {} : _ref$onPhotoSelect,
+    _ref$modalWidth = _ref.modalWidth,
+    modalWidth = _ref$modalWidth === void 0 ? 840 : _ref$modalWidth,
+    _ref$modalClassName = _ref.modalClassName,
+    modalClassName = _ref$modalClassName === void 0 ? '' : _ref$modalClassName;
   if (!active) {
     return null;
   }
-
   return React.createElement("div", {
     className: ''
   }, React.createElement(Modal, {
