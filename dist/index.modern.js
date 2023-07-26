@@ -86,7 +86,7 @@ function UnsplashPhotoCard(_ref) {
     }
   }, React.createElement("img", {
     className: 'card-img place-items-center w-full object-cover h-full rounded',
-    src: photo.urls.thumb,
+    src: photo.urls.raw + "&fm=png&w=200&fit=max",
     alt: photo.alt_description
   }), React.createElement("div", {
     className: 'absolute top-0 right-0 left-0 bottom-0 invisible group-hover:visible group-hover:bg-black/20',
