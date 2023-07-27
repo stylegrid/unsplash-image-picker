@@ -17,7 +17,7 @@ export default function UnsplashPhotoCard({
     >
       <img
         className='card-img place-items-center w-full object-cover h-full rounded'
-        src={`${photo.urls.raw}&fm=png&w=600&fit=max`}
+        src={`${photo.urls.raw}&fm=jpg&w=600&fit=max`}
         alt={photo.alt_description}
       />
       <div
